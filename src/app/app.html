@@ -1,1 +1,5 @@
+<div style="text-align: right; padding: 10px;">
+  <button *ngIf="authService.getToken()" (click)="logout()">Cerrar sesión</button>
+</div>
+
 <router-outlet></router-outlet>
