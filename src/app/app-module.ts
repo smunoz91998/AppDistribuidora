@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { Login } from './components/login/login.component';
 import { Clientes } from './components/clientes/clientes.component';
 import { ClientesForm } from './components/clientes-form/clientes-form.component';
@@ -19,6 +20,7 @@ import { ClientesForm } from './components/clientes-form/clientes-form.component
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [
