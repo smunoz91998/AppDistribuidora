@@ -1,1 +1,30 @@
-<p>clientes works!</p>
+<h2>Lista de Clientes</h2>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Teléfono</th>
+      <th>Dirección</th>
+      <th>Estado</th>
+      <th>Eliminado por</th>
+      <th>Fecha desactivación</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{ cliente.id }}</td>
+      <td>{{ cliente.nombre }}</td>
+      <td>{{ cliente.telefono }}</td>
+      <td>{{ cliente.direccion }}</td>
+      <td>{{ cliente.estado ? 'Activo' : 'Inactivo' }}</td>
+      <td>{{ cliente.userEliminaNombre }}</td>
+      <td>{{ cliente.fechaDesactivacion }}</td>
+      <td>
+        <button (click)="deleteCliente(cliente.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
