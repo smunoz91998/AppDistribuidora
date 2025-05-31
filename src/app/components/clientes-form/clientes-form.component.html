@@ -1,1 +1,26 @@
-<p>clientes-form works!</p>
+<h2>{{ isEdit ? 'Editar Cliente' : 'Nuevo Cliente' }}</h2>
+
+<form (ngSubmit)="saveCliente()">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" [(ngModel)]="cliente.nombre" name="nombre" required>
+
+  <br>
+
+  <label for="telefono">Teléfono:</label>
+  <input type="text" id="telefono" [(ngModel)]="cliente.telefono" name="telefono" required>
+
+  <br>
+
+  <label for="direccion">Dirección:</label>
+  <input type="text" id="direccion" [(ngModel)]="cliente.direccion" name="direccion" required>
+
+  <br>
+
+  <label for="estado">Estado:</label>
+  <input type="checkbox" id="estado" [(ngModel)]="cliente.estado" name="estado">
+
+  <br><br>
+
+  <button type="submit">{{ isEdit ? 'Actualizar' : 'Crear' }}</button>
+  <button type="button" (click)="cancel()">Cancelar</button>
+</form>
